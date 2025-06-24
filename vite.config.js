@@ -52,37 +52,38 @@ export default defineConfig({
         background_color: '#000000',
         display: 'standalone',
         orientation: 'portrait-primary',
-        scope: '/',
-        id: '/',
-        start_url: '/',
+        scope: '/AstroTrix/',
+        id: '/AstroTrix/',
+        start_url: '/AstroTrix/',
         icons: [
-          {
-            src: '/favicon.ico',
-            sizes: '64x64 32x32 24x24 16x16',
-            type: 'image/x-icon'
-          },
-          {
-            src: '/icon-192.png',
-            type: 'image/png',
-            sizes: '192x192',
-            purpose: 'any maskable'
-          },
-          {
-            src: '/icon-512.png',
-            type: 'image/png',
-            sizes: '512x512',
-            purpose: 'any maskable'
-          }
-        ],
-        screenshots: [
     {
-      src: '/screenshots/desktop-wide.png',
+      src: '/AstroTrix/icon-192.png',
+      type: 'image/png',
+      sizes: '192x192',
+      purpose: 'any maskable'
+    },
+    {
+      src: '/AstroTrix/icon-512.png',
+      type: 'image/png',
+      sizes: '512x512',
+      purpose: 'any maskable'
+    },
+    {
+      src: '/AstroTrix/icon-144.png',
+      type: 'image/png',
+      sizes: '144x144',
+      purpose: 'any'
+    }
+  ],
+  screenshots: [
+    {
+      src: '/AstroTrix/screenshots/desktop-wide.png',
       sizes: '1280x720',
       type: 'image/png',
       form_factor: 'wide'
     },
     {
-      src: '/screenshots/mobile-narrow.png',
+      src: '/AstroTrix/screenshots/mobile-narrow.png',
       sizes: '360x640',
       type: 'image/png',
       form_factor: 'narrow'
