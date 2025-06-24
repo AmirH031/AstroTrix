@@ -69,6 +69,12 @@ export default defineConfig({
       purpose: 'any maskable'
     },
     {
+    src: '/AstroTrix/icon-144.png',
+    type: 'image/png',
+    sizes: '144x144',
+    purpose: 'any'
+  },
+    {
       src: '/AstroTrix/icon-144.png',
       type: 'image/png',
       sizes: '144x144',
