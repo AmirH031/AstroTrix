@@ -1,0 +1,260 @@
+/* Base Transition Classes */
+.transition-normal {
+  transition: all 0.5s ease-in-out;
+}
+
+.transition-fast {
+  transition: all 0.3s ease-in-out;
+}
+
+.transition-heat {
+  transition: all 0.5s ease-in-out;
+  animation: heatWave 2s infinite;
+}
+
+.transition-seismic {
+  transition: all 0.6s ease-in-out;
+  animation: seismicShake 1s infinite;
+}
+
+.transition-refraction {
+  transition: all 0.5s ease-in-out;
+  filter: brightness(1.2);
+  animation: refractionGlow 1.5s infinite;
+}
+
+.transition-fade {
+  transition: all 0.7s ease-in-out;
+  animation: fadeMist 2s infinite;
+}
+
+.transition-thump {
+  transition: all 0.6s ease-in-out;
+  animation: thumpEffect 1s infinite;
+}
+
+.transition-wave {
+  transition: all 0.4s ease-in-out;
+  animation: waveMotion 1.5s infinite;
+}
+
+.transition-bloom {
+  transition: all 0.5s ease-in-out;
+  animation: bloomGrowth 2s infinite;
+}
+
+.transition-glitch {
+  transition: all 0.5s ease-in-out;
+  animation: glitchEffect 1s infinite;
+}
+
+/* Energy Effects */
+.pulse-omnitrix {
+  animation: omnitrixPulse 1s infinite;
+}
+
+.speed-trails {
+  position: relative;
+  overflow: hidden;
+}
+.speed-trails::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+  animation: speedTrail 1s linear infinite;
+}
+
+.flame-flickers {
+  position: relative;
+}
+.flame-flickers::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, transparent 70%);
+  animation: flameFlicker 1.5s infinite;
+}
+
+.seismic-pulse {
+  animation: seismicPulse 1s infinite;
+}
+
+.crystal-glow {
+  position: relative;
+}
+.crystal-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.2) 0%, transparent 70%);
+  animation: crystalGlow 1.5s infinite;
+}
+
+.mist-effect {
+  position: relative;
+}
+.mist-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(34, 211, 238, 0.1), transparent);
+  animation: mistFade 2s infinite;
+}
+
+.ground-cracks {
+  position: relative;
+}
+.ground-cracks::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(166, 98, 7, 0.5);
+  box-shadow: 0 0 10px rgba(166, 98, 7, 0.3);
+  animation: crackThump 1s infinite;
+}
+
+.wave-motion {
+  position: relative;
+}
+.wave-motion::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(248, 113, 113, 0.3), transparent);
+  animation: waveFlow 1.5s infinite;
+}
+
+.vine-growth {
+  position: relative;
+}
+.vine-growth::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(101, 163, 13, 0.2), transparent);
+  animation: vineBloom 2s infinite;
+}
+
+.cosmic-glow {
+  position: relative;
+}
+.cosmic-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+  animation: cosmicPulse 1.5s infinite;
+}
+
+/* Keyframe Animations */
+@keyframes omnitrixPulse {
+  0% { box-shadow: 0 0 0 0 rgba(209, 213, 219, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(209, 213, 219, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(209, 213, 219, 0); }
+}
+
+@keyframes speedTrail {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes flameFlicker {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes seismicShake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(2px, 2px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes refractionGlow {
+  0% { filter: brightness(1.2); }
+  50% { filter: brightness(1.5); }
+  100% { filter: brightness(1.2); }
+}
+
+@keyframes fadeMist {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes thumpEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes waveFlow {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes bloomGrowth {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glitchEffect {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes crackThump {
+  0% { opacity: 0.5; transform: scaleX(0); }
+  50% { opacity: 1; transform: scaleX(1); }
+  100% { opacity: 0.5; transform: scaleX(0); }
+}
+
+@keyframes crystalGlow {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes mistFade {
+  0% { opacity: 0.1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.1; }
+}
+
+@keyframes cosmicPulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}

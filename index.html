@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/AstroTrix/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AstroTrix - Alien-Powered Productivity</title>
+    <meta name="description" content="Your ultimate productivity companion with alien-powered features" />
+
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#00ff00" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="AstroTrix" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-TileImage" content="/AstroTrix/icon-192.png" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://astrotrix.app/" />
+    <meta property="og:title" content="AstroTrix - Alien-Powered Productivity" />
+    <meta property="og:description" content="Your ultimate productivity companion with alien-powered features" />
+    <meta property="og:image" content="/AstroTrix/icon-512.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://astrotrix.app/" />
+    <meta property="twitter:title" content="AstroTrix - Alien-Powered Productivity" />
+    <meta property="twitter:description" content="Your ultimate productivity companion with alien-powered features" />
+    <meta property="twitter:image" content="/AstroTrix/icon-512.png" />
+    
+    <!-- SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="AstroTrix Team" />
+    <meta name="keywords" content="productivity, tasks, alien, ben10, omnitrix, todo, planner, schedule" />
+    <link rel="canonical" href="https://astrotrix.app/" />
+    
+    <!-- Critical CSS inlined -->
+    <style>
+      /* Critical CSS for initial render */
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: #fff;
+        font-family: system-ui, -apple-system, sans-serif;
+        overflow-x: hidden;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* Loading spinner for initial load */
+      .initial-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .loader-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #333;
+        border-top: 3px solid #00ff00;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/AstroTrix/sounds/completion.wav" as="audio" />
+    <link rel="preload" href="/AstroTrix/sounds/reminder.wav" as="audio" />
+    <link rel="preload" href="/AstroTrix/sounds/default.wav" as="audio" />
+    <link rel="preload" href="/AstroTrix/Background.webm" as="video" />
+  </head>
+  <body>
+    <!-- Initial loading screen -->
+    <div id="initial-loader" class="initial-loader">
+      <div class="loader-spinner"></div>
+    </div>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

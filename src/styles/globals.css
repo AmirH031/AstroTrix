@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    /* ... (other variables remain unchanged) */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    /* ... (other variables remain unchanged) */
+  }
+}
+
+/* Ensure app container and video cover full screen */
+.app-container {
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.app-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure video is behind content */
+  filter: brightness(0.7) contrast(1.1) saturate(1.2);
+  transition: filter 0.3s ease-in-out;
+}
+
+.app-container.light video {
+  filter: brightness(0.3) contrast(0.6) saturate(0.5) opacity(0.4);
+}
+
+.app-container.dark video {
+  filter: brightness(0.5) contrast(1.3) saturate(1.3);
+}
+
+/* Full-screen card for Notifications */
+.notification-card {
+  width: 100%;
+  height: 100%; /* Use full height of container */
+  max-width: 100%; /* Prevent overflow on wide screens */
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.8); /* Dark glassmorphism */
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  overflow-y: auto; /* Scroll if content overflows */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.notification-card .section {
+  margin-bottom: 1rem;
+}
+
+.notification-card h2 {
+  font-size: 1.5rem;
+  color: #10b981; /* Emerald green */
+  margin-bottom: 0.5rem;
+}
+
+.notification-card p {
+  color: #d1d5db; /* Light gray for contrast */
+  margin: 0;
+}
+
+.notification-card .toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.notification-card .toggle input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  accent-color: #10b981; /* Green toggle */
+}
+
+/* Ensure mobile compatibility */
+@media (max-width: 768px) {
+  .notification-card {
+    padding: 0.5rem;
+  }
+
+  .notification-card h2 {
+    font-size: 1.25rem;
+  }
+}
