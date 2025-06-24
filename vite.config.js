@@ -60,13 +60,13 @@ export default defineConfig({
       src: '/AstroTrix/icon-192.png',
       type: 'image/png',
       sizes: '192x192',
-      purpose: 'any maskable'
+      purpose: 'maskable'
     },
     {
       src: '/AstroTrix/icon-512.png',
       type: 'image/png',
       sizes: '512x512',
-      purpose: 'any maskable'
+      purpose: 'maskable'
     },
     {
     src: '/AstroTrix/icon-144.png',
