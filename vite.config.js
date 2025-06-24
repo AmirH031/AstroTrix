@@ -39,9 +39,9 @@ export default defineConfig({
     }),
     
     VitePWA({
-      registerType: 'autoUpdate', // Changed from 'prompt' to 'autoUpdate'
+      registerType: 'autoUpdate', 
       devOptions: {
-        enabled: false // Disable in dev to prevent update prompts
+        enabled: true 
       },
       includeAssets: ['favicon.ico', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'],
       manifest: {
@@ -53,6 +53,7 @@ export default defineConfig({
         display: 'standalone',
         orientation: 'portrait-primary',
         scope: '/AstroTrix/',
+        id: '/AstroTrix/',
         start_url: '/AstroTrix/',
         icons: [
           {
@@ -72,7 +73,21 @@ export default defineConfig({
             sizes: '512x512',
             purpose: 'any maskable'
           }
-        ]
+        ],
+        screenshots: [
+    {
+      src: '/screenshots/desktop-wide.png',
+      sizes: '1280x720',
+      type: 'image/png',
+      form_factor: 'wide'
+    },
+    {
+      src: '/screenshots/mobile-narrow.png',
+      sizes: '360x640',
+      type: 'image/png',
+      form_factor: 'narrow'
+    }
+  ]
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
