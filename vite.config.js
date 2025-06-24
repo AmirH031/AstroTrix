@@ -61,7 +61,7 @@ export default defineConfig({
             type: 'image/x-icon'
           },
           {
-            src: '/icon-192.png',
+            src: '/AstroTrix/icon-192.png',
             type: 'image/png',
             sizes: '192x192',
             purpose: 'any maskable'
