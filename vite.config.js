@@ -52,9 +52,9 @@ export default defineConfig({
         background_color: '#000000',
         display: 'standalone',
         orientation: 'portrait-primary',
-        scope: '/AstroTrix/',
-        id: '/AstroTrix/',
-        start_url: '/AstroTrix/',
+        scope: '/',
+        id: '/',
+        start_url: '/',
         icons: [
           {
             src: '/favicon.ico',
